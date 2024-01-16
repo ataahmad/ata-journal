@@ -1,0 +1,6 @@
+node_modules/
+.env
+.DS_Store
+
+src/workbench.ts
+src/scripts/personalDraft.txt
