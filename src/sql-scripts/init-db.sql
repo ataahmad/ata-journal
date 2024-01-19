@@ -1,4 +1,4 @@
-CREATE TABLE journal_entries (
+CREATE TABLE personal_entries (
     entry_id TIMESTAMP DEFAULT CURRENT_TIMESTAMP PRIMARY KEY,
     content TEXT
 );
