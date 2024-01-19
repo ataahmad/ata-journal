@@ -5,6 +5,11 @@
   "main": "index.js",
   "scripts": {
     "add:personal": "ts-node src/scripts/addPersonalEntry.ts",
+    "docker:build": "docker build -t ata-journal-image .",
+    "docker:run": "docker container run --name ata-journal-container -d -p 3306:3306 -v ata-journal-volume:/var/lib/mysql ata-journal-image",
+    "docker:stop": "docker container stop ata-journal-container",
+    "docker:destroy": "docker container rm ata-journal-container",
+    "docker:nuke": "docker image rm ata-journal-image",
     "start": "ts-node src/index.ts",
     "build": "tsc",
     "start:prod": "node dist/index.js",
